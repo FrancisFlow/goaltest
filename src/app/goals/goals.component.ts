@@ -6,7 +6,7 @@ import { Goal } from '../goals';
   templateUrl: './goals.component.html',
   styleUrls: ['./goals.component.css']
 })
-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
+// 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
 export class GoalsComponent implements OnInit {
   goals:Goal[]=[
     new Goal(1, 'Find the spark that will shape you future', 'What is you why?', new Date(2022, 3, 3)),

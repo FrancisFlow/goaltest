@@ -9,6 +9,7 @@ import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { StrikeThisDirective } from './strike-this.directive';
 import { DateThingyPipe } from './date-thingy.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
+import { EmptyComponent } from './empty/empty.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GoalFormComponent } from './goal-form/goal-form.component';
     GoalDetailsComponent,
     StrikeThisDirective,
     DateThingyPipe,
-    GoalFormComponent
+    GoalFormComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,
