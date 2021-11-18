@@ -1,0 +1,9 @@
+<div>
+    <p>
+        {{goal.description}}
+    </p>
+    <p>There are {{goal.aDate | dateThingy}} days to go</p>
+    <button (click)='goalDelete(true)' >
+        Delete goal
+    </button>
+</div>

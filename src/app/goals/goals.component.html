@@ -1,0 +1,24 @@
+<div>
+    <p>
+        What is it that you want to achieve?
+    </p>
+      <ul>
+          <li *ngFor='let goal of goals; let i = index'>
+             <span appStrikeThis>{{goal.id}}</span>
+             <hr>
+             {{goal.name}} is due on      {{goal.aDate| date| uppercase}}
+             <button (click)='toggleDetails(i)' >Toggle Details</button>
+             <app-goal-details *ngIf='goal.showdescription' [goal]='goal'(isComplete)='toDelete($event, i)' ></app-goal-details>
+          </li>
+
+      </ul>
+      
+        <p *ngIf='goals.length>4'>
+            You, be a little more concise
+        </p>
+
+</div>
+
+
+
+<app-goal-form (addGoal)='addNewGoal($event)' ></app-goal-form>
