@@ -1,9 +1,17 @@
-<div>
-    <p>
-        {{goal.description}}
-    </p>
-    <p>There are {{goal.aDate | dateThingy}} days to go</p>
-    <button (click)='goalDelete(true)' >
-        Delete goal
-    </button>
-</div>
+
+<div class="row">
+    <div class="col-md-2">
+  
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{goal.description}}</h5>
+          <p class="card-text">This goal will be complete in {{goal.aDate | dateThingy}} days.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+  
+    </div>
+  </div>

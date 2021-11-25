@@ -1,4 +1,6 @@
 <div>
+    <ng-progress></ng-progress>
+
     <p>
         What is it that you want to achieve?
     </p>
@@ -7,8 +9,8 @@
              <span appStrikeThis>{{goal.id}}</span>
              <hr>
              {{goal.name}} is due on      {{goal.aDate| date| uppercase}}
-             <button (click)='toggleDetails(i)' >Toggle Details</button>
-             <app-goal-details *ngIf='goal.showdescription' [goal]='goal'(isComplete)='toDelete($event, i)' ></app-goal-details>
+             <button (click)='goToUrl(goal.id)' >Show Details</button>
+             <button (click)='deleteGoal(i)'>Delete Goal</button>
           </li>
 
       </ul>
@@ -18,6 +20,16 @@
         </p>
 
 </div>
+
+
+<hr>
+
+<div class="row">
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">{{quote.quote}}</p>
+      <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+    </blockquote>
+  </div>
 
 
 
